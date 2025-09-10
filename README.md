@@ -31,7 +31,7 @@ _text_ → converts to <em>text</em> (italic)
 
 Input (sample.md):
 
-# Welcome to My Converter
+# Converter
 
 This is a simple paragraph.  
 It supports **bold text** and _italic text_.
@@ -41,19 +41,6 @@ It supports **bold text** and _italic text_.
 - Easy to use
 - Written in Go
 - Converts `.md` → `.html`
-
-Thank you for trying it out!
-
-Output (sample.html):
-
-<h1>Welcome to My Converter</h1>
-<p>This is a simple paragraph.  
-It supports <strong>bold text</strong> and <em>italic text</em>.</p>
-<h1>Features</h1>
-<p>- Easy to use
-- Written in Go
-- Converts `.md` → `.html`</p>
-<p>Thank you for trying it out!</p>
 
 📖 How It Works
 
