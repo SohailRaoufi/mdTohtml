@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	"main/lexer"
 )
 
@@ -114,16 +113,4 @@ func (p *Parser) parseParagraph() *Node {
     }
 
     return para
-}
-
-
-func printAST(node *Node, indent string) {
-    fmt.Printf("%s%s", indent, node.Type)
-    if node.Value != "" {
-        fmt.Printf(": %s", node.Value)
-    }
-    fmt.Println()
-    for _, child := range node.Children {
-        printAST(child, indent+"  ")
-    }
 }

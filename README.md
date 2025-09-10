@@ -1,10 +1,66 @@
-# MD to HTML Convertor
-Just a simple md to html converter
+MD to HTML Converter
 
+A simple Markdown to HTML converter written in Go.
+It takes a .md file as input and generates a .html file as output.
 
-# LOGIC
+🚀 Usage
 
-    # -> a new H1 tag
-      -> no prefix symbol means a simple paragraph
-    * -> means italic the text
-    ** -> means bold the text
+# Run directly with Go
+
+go run main.go input.md
+
+# Example
+
+go run main.go sample.md
+
+# → Generates sample.html
+
+Now you can open the generated .html file in your browser.
+
+🧩 Logic
+
+# → converts to an <h1> tag
+
+No prefix symbol → converts to a <p> (paragraph)
+
+_text_ → converts to <em>text</em> (italic)
+
+**text** → converts to <strong>text</strong> (bold)
+
+📂 Example
+
+Input (sample.md):
+
+# Welcome to My Converter
+
+This is a simple paragraph.  
+It supports **bold text** and _italic text_.
+
+# Features
+
+- Easy to use
+- Written in Go
+- Converts `.md` → `.html`
+
+Thank you for trying it out!
+
+Output (sample.html):
+
+<h1>Welcome to My Converter</h1>
+<p>This is a simple paragraph.  
+It supports <strong>bold text</strong> and <em>italic text</em>.</p>
+<h1>Features</h1>
+<p>- Easy to use
+- Written in Go
+- Converts `.md` → `.html`</p>
+<p>Thank you for trying it out!</p>
+
+📖 How It Works
+
+The converter works in three stages:
+
+Lexer → Scans raw Markdown text and produces tokens (#, \*_, _, text, etc.).
+
+Parser → Builds an Abstract Syntax Tree (AST) from tokens.
+
+Renderer → Walks the AST and outputs corresponding HTML.
